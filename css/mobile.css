@@ -5,7 +5,10 @@ body .navbar-light .navbar-toggler-icon {
     border-radius: 5px;
    
 }
-
+.slide-container {
+   
+   height: 30%;
+ }
 .sec {
     margin: 150px 0 10px 0;
 
