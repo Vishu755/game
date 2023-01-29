@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href="style1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <style>
+  
+  
+  
+  
+    #btn {
+            position: absolute;
+            transition: .1s;
+            background-color: white;
+            padding: 10px;
+            height: 40px;
+            width: 150px;
+        }
+
+        #submitBtn {
+            position: absolute;
+            transition: .1s;
+            background-color: white;
+            padding: 10px;
+            height: 40px;
+            width: 150px;
+            color: black;
+        }
+		
+		
+		.ball {
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  background: #c00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s;
+}
+
+
+
+
+
+
+
+
+
+	
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #050801;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+a:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}	
+  </style>
+
+
+
+<div id="foo" class="ball"></div>
+
+
+<script>const f = document.getElementById('foo');
+document.addEventListener('click', (ev) => {
+  f.style.transform = `translateY(${ev.clientY - 25}px)`;
+  f.style.transform += `translateX(${ev.clientX - 25}px)`;
+}, false);</script>
+
+
+
+
+
+
+<div class="content" style="margin-left: 30%; margin-top: 10%;">
+  <div class="row">
+
+    <form action="page2.php" id="myForm1" class="needs-validation" novalidate>
+      <h1 class="text-center">Registration</h1><hr>
+      <div class="form-group">
+        First Name<input name="myInput" id="fisrtNameId" type="text" class="form-control" pattern="^[a-z]{2,15}$" required autofocus>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">a to z only (2 to 15 long)</div>
+      </div>
+      <div class="form-group">
+        Password<input type="password" id="pwdId" class="form-control" pattern="^[a-z]{2,6}$" required>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">a to z only (2 to 6 long)</div>
+      </div>
+      <div class="form-group">
+        <button id="submitBtn" type="submit" style="display: none;" disabled>Submit</button>
+      </div> 
+      <button id="btn">Submit</button>
+    </form>
+    
+
+
+  </div>
+</div>
+  
+  
+<a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Neon button
+    </a>
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Neon button
+    </a>
+    <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Neon button
+    </a>
+
+  <script>
+    const button = document.getElementById('btn');
+button.addEventListener('mouseover', function () {
+  var effect=Math.ceil(Math.random() * 90);
+    console.log(effect);
+    button.style.left = `${effect}%`;
+    // button.style.top = `${Math.ceil(Math.random() * 45)}%`;
+});
+button.addEventListener('click', function () {
+    alert('Validate form !')
+})
+</script>
+  <script>
+    $(document).ready(function(){
+      // ----------- Set all elements as INVALID --------------
+      var myInputElements = document.querySelectorAll(".form-control");
+      var i;
+      for (i = 0; i < myInputElements.length; i++) {
+        myInputElements[i].classList.add('is-invalid');
+        myInputElements[i].classList.remove('is-valid');
+      }
+      
+      // ----------------- Validate on submit -----------------
+      let currForm1 = document.getElementById('myForm1');
+      currForm1.addEventListener('submit', function(event) {
+        if (currForm1.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        else {
+          $("#submitBtn").attr("disabled",false);
+          $('#submitBtn').addClass('btn-primary').removeClass('btn-secondary');
+          currForm1.classList.add('was-validated');
+        }
+      }, false);
+      // ----------------- Validate on input -----------------
+      currForm1.querySelectorAll('.form-control').forEach(input => {
+        input.addEventListener(('input'), () => {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+          }
+          var is_valid = $('.form-control').length === $('.form-control.is-valid').length;
+          // $("#submitBtn").attr("disabled", !is_valid);
+          if (is_valid) {
+            // alert("form is valid");
+            $("#submitBtn").show();
+            $("#submitBtn").attr("disabled",false);
+            $('#btn').hide();
+            $('#submitBtn').addClass('btn-primary').removeClass('btn-secondary');
+          } else {
+            // alert("invalid");
+            $("#submitBtn").attr("disabled",true);
+            $('#submitBtn').addClass('btn-secondary').removeClass('btn-primary');
+          }
+        });
+      });
+      // ------------------------------------------------------
+    });
+  </script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+<div id="app-cover">
+  <div class="row">
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-1">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-2">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-3">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-4">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-5">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs"><span></span></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-6">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-7">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs">
+            <span></span>
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-8">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs">
+            <span></span>
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button r" id="button-9">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs">
+            <span></span>
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button b2" id="button-10">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs">
+            <span>YES</span>
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button b2" id="button-11">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs">
+            <span></span>
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button b2" id="button-12">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs">
+            <span></span>
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button b2" id="button-13">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs">
+            <span></span>
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button b2" id="button-14">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs">
+            <span></span>
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button b2" id="button-15">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button b2" id="button-16">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button b2" id="button-17">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs">
+            <span></span>
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-button-cover">
+      <div class="button-cover">
+        <div class="button b2" id="button-18">
+          <input type="checkbox" class="checkbox" />
+          <div class="knobs">
+            <span></span>
+          </div>
+          <div class="layer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+        
+        <div class="switch-holder">
+            <div class="switch-label">
+                <i class="fa fa-bluetooth-b"></i><span>Bluetooth</span>
+            </div>
+            <div class="switch-toggle">
+                <input type="checkbox" id="bluetooth">
+                <label for="bluetooth"></label>
+            </div>
+        </div>
+
+        <div class="switch-holder">
+            <div class="switch-label">
+                <i class="fa fa-wifi"></i><span>wi-fi</span>
+            </div>
+            <div class="switch-toggle">
+                <input type="checkbox" id="wifi">
+                <label for="wifi"></label>
+            </div>
+        </div>
+
+        <div class="switch-holder">
+            <div class="switch-label">
+                <i class="fa fa-map-marker"></i></i><span>Location</span>
+            </div>
+            <div class="switch-toggle">
+                <input type="checkbox" id="location">
+                <label for="location"></label>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

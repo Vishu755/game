@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+
+body{ font-family: 'Metal Mania', cursive;   }
+
+
+
+body { 
+  margin: 0px; 
+ background-image:url(../images/body-bg.png);
+}
+
+.container{
+	width: 1240px;
+	margin: 0 auto;
+}
+
+
+  
+  
+  .dropdown-toggle::after {
+    display: none;
+  }
+  
+  
+  
+.text-decoration-none{
+  text-decoration: none!important;
+}
+/* Font Awesome Icons have variable width. Added fixed width to fix that.*/
+.icon-width { width: 2rem;}
+
+a.navbar-brand img {
+    width: 225px;
+}
+ul.navbar-nav.mr-auto.pl-lg-4 {
+    font-size: 20px;
+    margin-left: 100px !important;
+}
+
+
+
+nav.navbar {
+    background: url(../images/hero-bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-color:#000000;
+}
+
+.section {
+    background: url(../images/hero-bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000;
+}
+
+
+.sec-side img {
+    width: 100%;
+    margin: 300px 0 0 0;
+}
+
+.sec {
+    margin: 300px 0 0 0;
+    color: white;
+
+}
+    
+.sec h1 {
+    font-size: 71px;
+   font-family: "Metal Mania", cursive;
+   animation: bounce;
+}
+
+
+.sec h3 {
+    font-size: 26px;
+    padding: 20px 0;
+}
+
+button.btn a {
+    color: white;
+    font-size: 21px;
+    font-family: "Metal Mania", cursive;
+}
+
+button.btn {
+    background-image: linear-gradient( to bottom, #2500f3, #ffffff26 , #0000f5);
+    border: 5px solid  #ff9905;
+    border-radius: 34px;
+    padding: 13px 13px;
+    position: relative;
+}
+button.btn a:hover {
+    text-decoration: none;
+}
+button.btn a:after {
+    content: '';
+    height: 3px;
+    background: #ff9905;
+    width: 0%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+button.btn a:hover:after {
+    width: 100%;
+    transition: 0.6s;
+}
+
+.gaming h1 {
+    text-align: center;
+    margin: 0 220px;
+    font-size: 50px;
+}
+
+.section2 {
+    padding: 100px 0;
+}
+ 
+
+.gaming h1 {
+    color: white;
+      font-family: "Metal Mania", cursive;
+}
+
+
+body .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #fff!important;
+}
+
+
+body .navbar-light .navbar-nav .nav-link {
+    color: #fff!important;
+	  font-family: "Metal Mania", cursive;
+}
+
+.middle {
+    text-align: center;
+    background-image: url(../images/gaming-world-bg1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 69px 0px;
+    color: white;
+}
+
+
+.middle h1 {
+    font-size: 23px;
+    padding: 30px 0 20px 0;
+}
+
+.middle p {
+    margin: 0 50px;
+}
+
+.gaming {
+    padding: 0 0 80px 0;
+}
+
+a.nav-link:hover {
+    border-radius: 7px 18px 9px 18px;
+    background-color: #af00ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*image slideshow */
+.slide-container {
+   display: flex;
+   justify-content: center;
+   position:relative;
+   margin: 0 auto;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .slide-container .slide {
+   position: relative;
+   display: none;
+   margin-top: 30px; 
+ }
+
+ .slide-container .slide img {
+   width: 100%;
+
+   border-radius: 10px;
+ }
+
+ figcaption {
+   text-align: center;
+ }
+
+ 
+ .active {
+   display:block
+ }
+ 
+ .slide-container .prev {
+   width: 30px;
+   position: absolute;
+   top: 45%;
+   left:10%;
+   background: rgba(255, 255, 255, 0.55);
+   cursor: pointer;
+   border-radius: 50%;
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+ }
+ 
+ .slide-container .next {
+   width: 30px;
+   position: absolute;
+   top: 45%;
+   right:10%;
+   background: rgba(255, 255, 255, 0.55);
+   cursor: pointer;
+   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+   border-radius: 50%;
+ }
+ 
+ .button img {
+   width: 40px;
+ }
+ 
+ /*fade effect when sliding through frames */
+ 
+ .slide-container .slide {
+   animation-name: transition;
+   animation-duration: 1.5s;
+ }
+ 
+ @keyframes transition {
+   0% {
+      opacity: 0.4
+   }
+   100% {
+      opacity: 1
+   }
+ }
+
+.youtube i.fa.fa-play-circle {
+    font-size: 70px;
+    color: orange;
+    position: absolute;
+    border: 6px solid red;
+    border-radius: 40px;
+    left: 500px;
+    bottom: 231px;
+}
+
+.youtube {
+    position: relative;
+}
+
+
+figure {
+    position: relative;
+}
+
+
+
+
+
+
+.section4 {
+    padding: 50px 0;
+}
+
+.UPCOMING {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+	  font-family: "Metal Mania", cursive;
+}
+
+.UPCOMING p {
+    margin: 0 277px;
+}
+
+.whitec {
+    color: white;
+}
+
+.whitec span {
+    color: #af36b7;
+}
+
+.icon i {
+    color: orange;
+    font-size: 82px;
+}
+
+
+.imf img {
+    padding: 0px 16px 0 20px;
+}
+.radius {
+    padding: 60px 45px;
+    margin: 65px 0px 0 0;
+    border: 3px solid #7e7b76;
+    border-radius: 20px;
+}
+
+.col-md-1.ss{
+    padding: 0;
+}
+.icon p {
+    color: #c75427;
+    text-align: center;
+    padding: 29px 0 0 0;
+}
+
+
+.headim {
+    text-align: center;
+    padding: 137px 0 0 0;
+}
+
+
+
+button.btn-1 {
+    padding: 14px 15px;
+    border: 5px solid #db8758;
+    border-radius: 28px;
+    background-image: linear-gradient(45deg, #f10000, #3f334073);
+}
+
+button.btn-1 a {
+    color: white;
+    font-size: 23px;
+}
+
+
+
+
+
+
+.main {
+    width: 241px;
+    background: #bd582838;
+    border: 1px solid #ed872038;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    clip-path: polygon(15% 0%, 100% 0, 100% 20%, 100% 74%, 85% 100%, 0 100%, 0% 80%, 0% 25%);
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+     font-family: "Metal Mania", cursive;
+    float: left;
+    margin: 96px 0px 101px 36px;
+    padding: 13px 0px;
+    text-shadow: 1px 1px black;
+    -webkit-box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
+}
+
+.count {
+    color: orange;
+    font-size: 32px;
+}
+.letter {
+    color: white;
+}
+.letter p {
+    text-align: center;
+    font-size: 17px;
+}
+
+button.btn-2 {
+    position: absolute;
+    top: 150px;
+    left: 192px;
+    padding: 5px 30px;
+    border: 5px solid #ff7300;
+    border-radius: 20px;
+    opacity: 0;
+    background-color: #6363bf94;
+}
+.two-set {
+    position: relative;
+    margin: 0 0px 50px 0;
+}
+
+.two-set img {
+    width: 100%;
+}
+.black:hover .btn-2 {
+    opacity: 1;
+    transition: 1s;
+}
+
+.two-set:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #00000082;
+  border-radius: 37px;
+    opacity: 0;
+    position: absolute;
+  
+}
+.two-set:hover::before {
+    opacity: 1;
+    transition: 0.6s;
+}
+
+button.btn-2 a {
+    color: white;
+  font-family: "Metal Mania", cursive;
+    font-size: 20px;
+}
+
+.white h1 {
+    color: white;
+    font-size: 52px;
+    padding: 45px 0 0 0;
+	  font-family: "Metal Mania", cursive;
+}
+
+.white h1 span {
+    color: #8a46d5;
+}
+.white {
+    position: relative;
+}
+
+.white:after {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 48%;
+    bottom: 0;
+    background: #f51bf996;
+    top: 102px;
+    right: 0;
+}
+
+.section6 {
+    padding: 80px 0;
+}
+
+
+.BLOG {
+    text-align: center;
+    color: white;
+	  font-family: "Metal Mania", cursive;
+}
+
+.BLOG p {
+    font-size: 20px;
+    margin: 14px 20%;
+}
+
+.thr {
+    color: white;
+    padding: 10px 29px;
+}
+
+button.btn-3 {
+    border: none;
+    background-color: transparent;
+	   position: relative;
+	       margin: 0 0 0 55px;
+}
+
+button.btn-3 a {
+    color: white;
+}
+
+button.btn-3:before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 59%;
+    bottom: 9px;
+    background-color: chartreuse;
+    left: -55px;
+}
+
+.thr p {
+    margin: 0 0 20px 0;
+}
+
+.thr h3 {
+    margin: 0 0 30px 0;
+}
+.MORE {
+    margin-bottom: 50px;
+}
+
+.with {
+    background-image: url(../images/gaming-update.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 70px 26px;
+	  font-family: "Metal Mania", cursive;
+}
+
+.CONNECT h1 {
+    color: white;
+}
+button.btn-4 {
+    padding: 10px 20px;
+    border: 4px solid #ef7b08;
+    background-color: transparent;
+    border-radius: 13px;
+    margin: 0 0 0 210px;
+}
+button.btn-4 a {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+.foot p {
+    color: white;
+    font-size: 16px;
+    margin: 25px 0;
+}
+
+.foot ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 45px;
+}
+
+
+.foot a i {
+    font-family: 'FontAwesome';
+    color: white;
+    font-size: 23px;
+}
+
+
+.foot img {
+    width: 50%;
+}
+
+
+.contact {
+    color: white;
+}
+
+.contact span {
+    color: #cc00ff;
+}
+
+
+.contact p {
+    margin: 17px 0;
+}
+
+.winner img {
+    width: 100%;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+
+.contact a {
+    color: white;
+}
+
+.contact li {
+    padding: 0 0 16px  0;
+}
+
+
+.contact h1 {
+    font-size: 25px;
+    padding: 0px 0 26px 0;
+}
+
+
+
+.contact {
+    padding: 0 17px;
+}
+
+
+
+		.ball {
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  background: #c00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s;
+}
+
+
+
+
+.vi{
+    color:#c75427;
+}
+
+#loading{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background: white url('https://i.gifer.com/1amw.gif') no-repeat center;
+    z-index: 9999;
+    background-color: hsl(0, 0%, 90%);
+}
